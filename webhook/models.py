@@ -16,7 +16,7 @@ from django.db import models
 
 
 class WebhookEvent(models.Model):
-    id = models.CharField(max_length=255, unique=True)
+    id = models.CharField(max_length=255, unique=True, primary_key=True)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     currency = models.CharField(max_length=10)
     created_at_time = models.BigIntegerField()
